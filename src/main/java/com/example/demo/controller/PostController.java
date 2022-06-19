@@ -25,9 +25,6 @@ public class PostController {
 	public ResponseEntity<Object> getPosts() {
 		ResponseEntity<Object> res = null;
 		try {
-
-//			HttpEntity<Object> entity = new HttpEntity<Object>();
-
 			res = restTemplate.exchange("https://jsonplaceholder.typicode.com/posts", HttpMethod.GET,
 					this.getHttpEntity(),Object.class);
 //			res = restTemplate.getForEntity("https://jsonplaceholder.typicode.com/posts", Object.class);
